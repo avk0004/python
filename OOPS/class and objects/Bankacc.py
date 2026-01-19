@@ -15,6 +15,8 @@ class Bank:
     def Bank_policy(bal):
         if bal>=100:
             print("Bank Polciy")
+        else:
+            print("balance low")
 Name= 'abc'
 balance = 5000
 bank = Bank(Name,balance)
@@ -26,3 +28,4 @@ w = bank.withdrawal(100)
 print(w)
 x = bank.changeName('xyz',4000)
 print(x.BName)
+b = x.Bank_policy(w)
