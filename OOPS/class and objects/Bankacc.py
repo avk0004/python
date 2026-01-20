@@ -2,6 +2,8 @@ class Bank:
     def __init__(self,BankName,Balance):
         self.BName = BankName
         self.bal = Balance 
+    @property
+    
     def deposit(self,dep):
         self.bal += dep
         return self.bal
