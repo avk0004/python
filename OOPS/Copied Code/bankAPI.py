@@ -37,6 +37,7 @@ def deposit(amount: int):
 
 @app.post("/withdraw/{amount}")
 def withdraw(amount: int):
+    n = int(input())
     new_balance = bank.withdrawal(amount)
     return {"new_balance": new_balance}
 
