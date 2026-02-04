@@ -1,33 +1,27 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
-class ABC:
-    @abstractclassmethod
-    def Hidden(self,balance):
+# Abstract class
+class Tran(ABC):
+    @abstractmethod
+    def Hidden(self, balance):
         pass
 
+
+# Getter / Setter class
 class getSet:
-    def __init__(self, transaction,types,category):
+    def __init__(self, transaction, types, category):
         self.__transaction = transaction
         self.__types = types
         self.__category = category
+
     @property
     def Transaction(self):
         return self.__transaction
-    @Transaction.setter
-    def Transaction(self):
-        return self.__transaction
-    def Type_Transaction(self,type):
-        if type =="Cash":
-            class CashTrancation(ABC):
-                def __init__(self,amount):
-                    self.amount = amount
-                def Hidden(self,balance):
-                    balance -=self.amount
-                    return balance
-            return CashTrancation 
-                    
 
+    @property
+    def Types(self):
+        return self.__types
 
-    
-
-        
+    @property
+    def Category(self):
+        return self.__category
